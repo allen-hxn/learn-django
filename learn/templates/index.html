@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+</head>
+<body>
+    这是个测试
+
+    {% if person_list %}
+    <ul>
+    {% for person in person_list %}
+        <li><a href="/polls/{{ person.id }}/">{{ person.name }}</a></li>
+    {% endfor %}
+    </ul>
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %}
+</body>
+</html>
